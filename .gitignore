@@ -97,4 +97,4 @@ vector_db_temp/
 # GitHub has a strict file size limit (warning at 50MB, block at 100MB).
 # If content.jsonl is small, it's better to track it to make the repo self-contained.
 #
-# data/content.jsonl
+data/content.jsonl
