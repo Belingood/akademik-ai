@@ -1,0 +1,100 @@
+# ==============================================================================
+# Standard Python .gitignore file for the AkademikAI project
+# ==============================================================================
+
+# --- Byte-compiled and optimized files ---
+# Python generates these files automatically. They don't belong in version control.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- C extensions ---
+*.so
+
+# --- Distribution / packaging ---
+# Ignore artifacts from building and distributing the package.
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- IDE and Editor specific files ---
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# --- Virtual Environments ---
+# Virtual environments should always be ignored. Dependencies are managed via requirements.txt.
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+.env.bak/
+
+# --- Secrets and Environment Files ---
+# NEVER commit secret files. The .env.example file should be tracked instead.
+.env
+*.env.*
+!*.env.example
+
+# --- Python-related files ---
+# IPython/Jupyter notebooks
+.ipynb_checkpoints/
+# Celery
+celerybeat-schedule
+
+# --- Testing & Reports ---
+# Ignore artifacts from test runners and coverage reports.
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# --- OS-generated files ---
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+
+# ==============================================================================
+# Project-specific ignores
+# ==============================================================================
+
+# --- Generated Vector Database ---
+# The vector database is a generated artifact and can be very large.
+# It should be built from the source data, not stored in git.
+vector_db/
+vector_db_temp/
+
+# --- Source Data ---
+# Uncomment the line below IF your data files are too large for the repository.
+# GitHub has a strict file size limit (warning at 50MB, block at 100MB).
+# If content.jsonl is small, it's better to track it to make the repo self-contained.
+#
+# data/content.jsonl
