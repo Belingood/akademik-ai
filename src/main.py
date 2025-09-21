@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from src.api import endpoints
 
 # --- Application Metadata ---
@@ -38,6 +39,23 @@ app_metadata = {
 
 # --- FastAPI App Initialization ---
 app = FastAPI(**app_metadata)
+
+# --- CORS Middleware --- #
+origins = [
+    "http://localhost",
+    "http://localhost:5000",
+    "http://127.0.0.1",
+    "http://127.0.0.1:5000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"], # Allow (GET, POST, etc.)
+    allow_headers=["*"], # Allow all titles
+)
+# --- end of CORS --- #
 
 # --- Include API Routers ---
 # Include the router from the endpoints module. All routes defined in that

@@ -117,9 +117,28 @@ uvicorn src.main:app --reload
 
 API będzie działać pod adresem `http://127.0.0.1:8000`.
 
-### 7. Eksploracja API
+### 7. Uruchomienie Demonstracyjnego Czat-Interfejsu (Opcjonalnie)
 
-Otwórz przeglądarkę internetową i przejdź pod adres **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**, aby uzyskać dostęp do interaktywnej dokumentacji Swagger UI. Możesz przetestować endpoint `/api/v1/ask` bezpośrednio z poziomu przeglądarki.
+Aby zwizualizować działanie API, możesz uruchomić prostą aplikację webową z interfejsem czatu, opartą na Flask. Wymaga to uruchomienia dwóch terminali jednocześnie.
+
+-   **Terminal 1 (Uruchomienie Backendu FastAPI):**
+    Jeśli serwer API jeszcze nie działa, uruchom go:
+    ```bash
+    uvicorn src.main:app --reload
+    ```
+
+-   **Terminal 2 (Uruchomienie Frontendu Flask):**
+    Otwórz nowy terminal i uruchom serwer aplikacji demonstracyjnej:
+    ```bash
+    python frontend_demo/app.py
+    ```
+
+-   **Otwórz Czat:**
+    W przeglądarce internetowej przejdź pod adres **[http://127.0.0.1:5000](http://127.0.0.1:5000)**. Możesz teraz rozmawiać z asystentem AkademikAI.
+
+### 8. Eksploracja API
+
+Jeśli chcesz komunikować się z API bezpośrednio, otwórz przeglądarkę internetową i przejdź pod adres **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)**, aby uzyskać dostęp do interaktywnej dokumentacji Swagger UI. Możesz przetestować endpoint `/api/v1/ask` bezpośrednio stamtąd.
 
 ---
 

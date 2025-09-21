@@ -113,9 +113,28 @@ uvicorn src.main:app --reload
 
 The API will be running at `http://127.0.0.1:8000`.
 
-### 7. Explore the API
+### 7. Run the Demo Web Chat (Optional)
 
-Open your web browser and navigate to **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)** to access the interactive Swagger UI documentation. You can test the `/api/v1/ask` endpoint directly from your browser.
+To visualize the API's functionality, you can run a simple Flask-based web chat application. This requires two terminals running simultaneously.
+
+-   **Terminal 1 (Run the FastAPI Backend):**
+    If it's not already running, start the main API server:
+    ```bash
+    uvicorn src.main:app --reload
+    ```
+
+-   **Terminal 2 (Run the Flask Frontend):**
+    Open a new terminal and run the demo application server:
+    ```bash
+    python frontend_demo/app.py
+    ```
+
+-   **Open the Chat:**
+    Navigate your web browser to **[http://127.0.0.1:5000](http://127.0.0.1:5000)**. You can now interact with the AkademikAI assistant.
+
+### 8. Explore the API
+
+If you wish to interact with the backend API directly, open your browser and navigate to **[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)** to access the interactive Swagger UI documentation. You can test the `/api/v1/ask` endpoint from there.
 
 ---
 
